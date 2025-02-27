@@ -1,0 +1,122 @@
+:root {
+  --base-color: #ebebf0;
+  --text-color: rgb(8, 8, 8);
+  --secondary-text: red;
+  --third-text: rgb(47, 213, 224);
+  --secondary-color: rgb(221, 235, 230);
+  --third-color: rgb(214, 214, 216);
+  --button-color: rgb(230, 230, 236);
+  --operator-color: rgb(158, 101, 139);
+  --delete-color: rgb(143, 114, 182);
+}
+.dark-mode {
+  --base-color: #070218;
+  --text-color: white;
+  --secondary-text: red;
+  --third-text: rgb(47, 213, 224);
+  --secondary-color: rgb(19, 19, 39);
+  --third-color: rgb(10, 10, 26);
+  --button-color: rgb(14, 14, 29);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.top-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+.light-mode {
+  margin: 40px;
+}
+
+
+@media(max-width: 424px){
+  .top-box{
+    margin-bottom: 50px;
+  }
+}
+.dark-mode {
+  margin: 40px;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  margin: 40px;
+}
+.calculation-box {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 540px;
+  width: 295px;
+  border-radius: 40px;
+}
+.bottom-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Operation-box {
+  height: 300px;
+  width: 255px;
+  background-color: var(--third-color);
+  border-radius: 40px;
+  padding: 20px;
+}
+.icons {
+  height: 35px;
+}
+input {
+  width: 70%;
+  padding: 25px;
+  font-size: 40px;
+  margin: 20px;
+  margin-top: 70px;
+  text-align: right;
+  background: transparent;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+}
+button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin: 5px;
+  border: none;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: beige;
+  color: black;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.icons span:first-child {
+  display: none;
+}
+
+.dark-mode .icons span:first-child {
+  display: block;
+}
+.dark-mode .icons span:last-child {
+  display: none;
+}
+.operators {
+  background-color: var(--operator-color);
+  font-size: 1.5rem;
+}
+
+.delete {
+  background-color: var(--delete-color);
+}
